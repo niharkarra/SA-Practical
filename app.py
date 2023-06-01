@@ -5,7 +5,7 @@ app = Flask(__name__)
 resume_data = {
     "name": "John Doe",
     "skills": ["Python", "Java", "JavaScript", "SQL"],
-    "certifications": ["AWS Certified Developer", "Microsoft Certified Azure Developer"]
+    "certifications": ["AWS Certified Developer", "Microsoft Certified Azure Developer", "New Changes"]
 }
 
 # Route to display skills in HTML
