@@ -2,6 +2,8 @@ branch-defaults:
   default:
     environment: null
     group_suffix: null
+  feature/v1.0:
+    environment: SWA-env
 global:
   application_name: SWA
   branch: null
