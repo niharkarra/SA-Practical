@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to {{ name }}'s Resume API!</h1>
+    <h2>About:</h2>
+    <p>{{ about }}</p>
+    <h2>Skills:</h2>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Certifications:</h2>
+    <ul>
+        {% for certification in certifications %}
+            <li>{{ certification }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

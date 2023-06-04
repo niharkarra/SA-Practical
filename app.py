@@ -11,11 +11,7 @@ resume_data = {
 
 @app.route('/')
 def home():
-    return f"Welcome to {resume_data['name']}'s Resume API!"
-
-@app.route('/about', methods=['GET'])
-def display_about():
-    return render_template('about.html', name=resume_data["name"], about=resume_data["about"])
+    return render_template('home.html', name=resume_data["name"], about=resume_data["about"], skills=resume_data["skills"], certifications=resume_data["certifications"])
 
 @app.route('/skills', methods=['GET'])
 def display_skills():
