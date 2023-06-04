@@ -1,19 +1,10 @@
-FROM python:3.11.3
+FROM python:3.8-slim-buster
 
-# COPY . /app
+WORKDIR /app
 
-# Add sample application
-ADD application.py /tmp/application.py
-
-# Set the working directory in the container
-# WORKDIR /app
-
-# Copy the requirements file and install dependencies
-COPY requirements.txt .
+COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port your Flask application runs on
-EXPOSE 5000
+COPY . .
 
-# Define the command to run your Flask application
-CMD ["python", "/tmp/application.py"]
+CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
