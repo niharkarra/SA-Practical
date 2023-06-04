@@ -26,7 +26,12 @@ resume_data = {
             "year": 2013,
             "location": "Hyderabad, India"
         }
-    ]
+    ],
+    "contact": {
+        "Email": "niharreddyk9@gmail.com",
+        "Phone": "+1 847-786-9012",
+        "Address": "10591 N MacArthur Blvd, Irving, Tx, 75063"
+    }
 }
 
 @app.route('/')
@@ -44,6 +49,11 @@ def display_certifications():
 @app.route('/education', methods=['GET'])
 def display_education():
     return render_template('education.html', education=resume_data["education"])
+
+@app.route('/contact', methods=['GET'])
+def display_contact():
+    return render_template('contact.html', contact=resume_data["contact"])
+
 
 # Error handler for routes that are not found
 @app.errorhandler(404)
