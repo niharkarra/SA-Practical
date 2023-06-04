@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 resume_data = {
     "name": "Nihar Karra",
-    "skills": ["Python", "Java", "JavaScript", "SQL"],
-    "certifications": ["AWS Certified Developer", "Microsoft Certified Azure Developer", "New Changes"],
+    "skills": ["UNIX & LINUX", "AWS", "Docker", "Kubernetes", "Git, GitHub, BitBucket", "Jenkins", "Python", "Maven, Gradle, NodeJs", "Sonatype Nexus, NexusIQ", "Jfrog Artifactory, Xray", "Sonarqube", "CloudFormation", "Beanstalk", "VPC", "IAM", "S3", "ELB", "ROUTE53"],
+    "certifications": ["Certified Kubernetes Administrator", "AWS Certfied Cloud Practitioner", "AWS DevOps Professional(In progress)"],
     "about": "As a seasoned DevOps Engineer with 9+ years of experience, I have expertise in automating, building, deploying, and releasing code across various environments. My technical skills include Linux OS, Containerization, Orchestration, Infrastructure Provisioning, Automation, and DevOps evaluations. I have a successful track record of achieving major milestones for high-profile clients such as Walmart and American Airlines. My knowledge and understanding of AWS Cloud Services, networking, and troubleshooting enable me to manage all aspects of the software configuration management process. I have experience in source code migrations, CI/CD pipeline creation, and building shared libraries. I also possess extensive experience in microservice-oriented architectures, utilizing Kubernetes for deployments, auto-scaling, config maps, and ingress. Moreover, I have demonstrated my ability to work with different development methodologies and enterprise systems architectures. As a team player, I have trained developers on different DevOps practices and tools. I am passionate about leveraging my skills to help organizations achieve their goals through efficient and effective DevOps practices."
 }
 
