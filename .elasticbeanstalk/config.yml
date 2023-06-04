@@ -1,12 +1,11 @@
 branch-defaults:
   feature/v1.0:
     environment: SA-Practical-dev
-    group_suffix: null
 global:
   application_name: SA-Practical
   branch: null
   default_ec2_keyname: niharvpc
-  default_platform: Docker running on 64bit Amazon Linux 2
+  default_platform: Python 3.11 running on 64bit Amazon Linux 2023
   default_region: us-east-1
   include_git_submodules: true
   instance_profile: null

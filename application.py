@@ -31,6 +31,6 @@ def page_not_found(e):
         return render_template('error.html', error_message="404 - Page not found"), 404
 
 if __name__ == '__main__':
-    httpd = make_server('', 8000, application)
+    # httpd = make_server('', 8000, application)
     application.run(debug=True)
     application.debug = True
