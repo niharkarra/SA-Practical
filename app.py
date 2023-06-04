@@ -53,7 +53,7 @@ def display_education():
 # Error handler for routes that are not found
 @app.errorhandler(404)
 def page_not_found(e):
-    return "404 - Page not found", 404
+    return "404 - Page not found, Please use the routes only that are available - Nihar", 404
 
 if __name__ == '__main__':
     app.run(debug=True)
