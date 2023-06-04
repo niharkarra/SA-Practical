@@ -7,7 +7,7 @@
     <h1>Education</h1>
     <ul>
         {% for education_item in education %}
-            <li>{{ education_item["degree"] }}, {{ education_item["major"] }}, {{ education_item["year"] }}, {{ education_item["location"] }}</li>
+            <li>{{ education_item.degree }}, {{ education_item.major }}, {{ education_item.year }}, {{ education_item.location }}</li>
         {% endfor %}
     </ul>
 </body>
