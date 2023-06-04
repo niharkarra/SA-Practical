@@ -26,6 +26,14 @@ footer p {
     color: #666;
 }
 
+h2#About,
+h2#technical-skills,
+h2#awards-certifications,
+h2#education {
+    font-weight: bold;
+    color: black;
+}
+
 @keyframes fireworks {
   0% {
     opacity: 0;
