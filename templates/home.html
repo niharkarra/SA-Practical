@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <title>Home</title>
     <style>
         body {
@@ -42,6 +43,11 @@
         <h1>Welcome to {{ name }}'s Resume API!</h1>
         <h2>About</h2>
         <p>{{ about }}</p>
+
+        <p id="datetime"></p>
+        <a href="mailto:Niharreddy.k@gmail.com"><i class="fas fa-envelope"></i> Niharreddy.k@gmail.com</a> | <i class="fas fa-phone-alt"></i> +1(847)-786-9012
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/niharkarra/">https://www.linkedin.com/in/niharkarra/</a></p>
+        
         <h2>Skills</h2>
         <ul>
             {% for skill in skills %}
