@@ -31,7 +31,7 @@ resume_data = {
 
 @app.route('/')
 def home():
-    return render_template('home.html', name=resume_data["name"], about=resume_data["about"], skills=resume_data["skills"], certifications=resume_data["certifications"], education=resume_data["education"])
+    return render_template('home.html', name=resume_data["name"], about=resume_data["about"], skills=resume_data["skills"], certifications=resume_data["certifications"], education_data=resume_data["education"])
 
 @app.route('/skills', methods=['GET'])
 def display_skills():

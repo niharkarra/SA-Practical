@@ -5,24 +5,29 @@
 </head>
 <body>
     <h1>Welcome to {{ name }}'s Resume API!</h1>
-    <h2>About:</h2>
+    <h2>About</h2>
     <p>{{ about }}</p>
-    <h2>Skills:</h2>
+    <h2>Skills</h2>
     <ul>
         {% for skill in skills %}
             <li>{{ skill }}</li>
         {% endfor %}
     </ul>
-    <h2>Certifications:</h2>
+    <h2>Certifications</h2>
     <ul>
         {% for certification in certifications %}
             <li>{{ certification }}</li>
         {% endfor %}
     </ul>
-    <h2>Education:</h2>
+    <h2>Education</h2>
     <ul>
-        {% for education in education %}
-            <li>{{ education }}</li>
+        {% for education_item in education_data %}
+            <li>
+                <strong>Degree:</strong> {{ education_item.degree }}<br>
+                <strong>Major:</strong> {{ education_item.major }}<br>
+                <strong>Year:</strong> {{ education_item.year }}<br>
+                <strong>Location:</strong> {{ education_item.location }}<br>
+            </li>
         {% endfor %}
     </ul>
 </body>
