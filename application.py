@@ -1,7 +1,6 @@
-from flask import Flask, render_template, jsonify
-from wsgiref.simple_server import make_server, WSGIServer
+from flask import Flask, render_template, jsonify, request
 
-application = Flask(__name__)
+app = Flask(__name__)
 
 resume_data = {
     "name": "Nihar Karra",
@@ -9,20 +8,20 @@ resume_data = {
     "certifications": ["AWS Certified Developer", "Microsoft Certified Azure Developer", "New Changes"]
 }
 
-@application.route('/')
+@app.route('/')
 def home():
     return f"Welcome to {resume_data['name']}'s Resume API!"
 
-@application.route('/skills', methods=['GET'])
+@app.route('/skills', methods=['GET'])
 def display_skills():
-    return render_template('skills.html', skills=resume_data["skills"])
+    return jsonify(skills=resume_data["skills"])
 
-@application.route('/certifications', methods=['GET'])
+@app.route('/certifications', methods=['GET'])
 def display_certifications():
-    return render_template('certifications.html', certifications=resume_data["certifications"])
+    return jsonify(certifications=resume_data["certifications"])
 
 # Error handler for routes that are not found
-@application.errorhandler(404)
+@app.errorhandler(404)
 def page_not_found(e):
     # Check the request content type to determine the response format
     if request.headers.get('Content-Type') == 'application/json':
@@ -31,6 +30,4 @@ def page_not_found(e):
         return render_template('error.html', error_message="404 - Page not found"), 404
 
 if __name__ == '__main__':
-    # httpd = make_server('', 8000, application)
-    application.run(debug=True)
-    application.debug = True
+    app.run(debug=True)
