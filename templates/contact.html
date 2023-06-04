@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact</title>
+    <title>Education</title>
 </head>
 <body>
-    <h1>Contact Information</h1>
-    <p><strong>Email:</strong> {{ contact.email }}</p>
-    <p><strong>Phone:</strong> {{ contact.phone }}</p>
-    <p><strong>Address:</strong> {{ contact.address }}</p>
+    <h1>Education</h1>
+    <ul>
+        {% for edu in education %}
+            <li>
+                <strong>Email:</strong> {{ edu.email}}<br>
+                <strong>Phone:</strong> {{ edu.phone }}<br>
+                <strong>Address:</strong> {{ edu.address }}<br>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

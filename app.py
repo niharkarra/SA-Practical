@@ -28,9 +28,9 @@ resume_data = {
         }
     ],
     "contact": {
-        "Email": "niharreddyk9@gmail.com",
-        "Phone": "+1 847-786-9012",
-        "Address": "10591 N MacArthur Blvd, Irving, Tx, 75063"
+        "email": "niharreddyk9@gmail.com",
+        "phone": "+1 847-786-9012",
+        "address": "10591 N MacArthur Blvd, Irving, Tx, 75063"
     }
 }
 
@@ -53,7 +53,6 @@ def display_education():
 @app.route('/contact', methods=['GET'])
 def display_contact():
     return render_template('contact.html', contact=resume_data["contact"])
-
 
 # Error handler for routes that are not found
 @app.errorhandler(404)
