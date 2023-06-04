@@ -36,7 +36,7 @@ resume_data = {
 
 @app.route('/')
 def home():
-    return render_template('home.html', name=resume_data["name"], about=resume_data["about"], skills=resume_data["skills"], certifications=resume_data["certifications"], education=resume_data["education"], contact=resume_data["contact"])
+    return render_template('home.html', name=resume_data["name"], about=resume_data["about"], skills=resume_data["skills"], certifications=resume_data["certifications"], education_data=resume_data["education"])
 
 @app.route('/skills', methods=['GET'])
 def display_skills():
@@ -49,10 +49,6 @@ def display_certifications():
 @app.route('/education', methods=['GET'])
 def display_education():
     return render_template('education.html', education=resume_data["education"])
-
-@app.route('/contact', methods=['GET'])
-def display_contact():
-    return render_template('contact.html', contact=resume_data["contact"])
 
 # Error handler for routes that are not found
 @app.errorhandler(404)
