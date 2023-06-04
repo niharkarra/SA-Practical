@@ -14,5 +14,6 @@ Sample API written in Python using Flask that returns elements like skills, cert
 - Beanstalk URL - http://sa-practical-dev.us-east-1.elasticbeanstalk.com/
 - Public URL - https://karnihar.awsps.myinstance.com/
 
+--
 
 
