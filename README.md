@@ -4,7 +4,7 @@ Sample API written in Python using Flask that returns elements like skills, cert
 - App is publicly available at https://karnihar.awsps.myinstance.com/
 - App redirects from HTTP to HTTPS.
 - App is load-balanced and autoscaling is set to min=1 and max=4 instances.
-- App uses `ELBSecurityPolicy-tls13-1-3-2021-06`
+- App uses `ELBSecurityPolicy-tls13-1-3-2021-06`, this policy is an AWS Elastic Load Balancer (ELB) security policy that supports TLS 1.3 encryption protocol.
 
 ## Technology Stack:
 
