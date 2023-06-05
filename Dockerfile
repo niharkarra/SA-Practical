@@ -1,10 +1,21 @@
-FROM python:3.8-slim-buster
+# Use an official Python runtime as the base image
+FROM python:3.9-slim-buster
 
+# Set the working directory in the container
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+# Copy the requirements file to the container
+COPY requirements.txt .
+
+# Install the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the Flask app files to the container
 COPY . .
 
-CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
+# Expose the port that the Flask app will be running on
+EXPOSE 5000
+
+# Set the entry point command to run the Flask app
+CMD ["python", "app.py"]
+
