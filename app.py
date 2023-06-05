@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from wsgiref.simple_server import make_server, WSGIServer
 
 app = Flask(__name__)
 
@@ -56,4 +57,6 @@ def page_not_found(e):
     return "404 - Page not found, Please use the routes only that are available - Nihar", 404
 
 if __name__ == '__main__':
+    httpd = make_server('', 8000, app)
+    print "Serving on port 8000..."
     app.run(debug=True)
