@@ -35,7 +35,8 @@ Sample API written in Python using Flask that returns elements like skills, cert
 ## Running the App Locally:
 
 **Prerequisites:** Python3
-Run locally using `python3 -m flask run --host=0.0.0.0 --port=5001`
+1. Run locally using `python3 -m flask run --host=0.0.0.0 --port=5001`
+2. Visit the site at http://127.0.0.1:5001/
 
 ## Running the App as Docker Container:
 
