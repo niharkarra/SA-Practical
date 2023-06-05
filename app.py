@@ -58,6 +58,6 @@ def page_not_found(e):
 
 if __name__ == '__main__':
    # If you get port in use issues, Uncomment below lines if you want to run app locally using docker.
-   # app.run(host='0.0.0.0', port=80)
-   # print("Serving on port 80...")
-    app.run(debug=True)
+   app.run(host='0.0.0.0', port=80)
+   print("Serving on port 80...")
+   app.run(debug=True)
