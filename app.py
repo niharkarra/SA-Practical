@@ -58,5 +58,5 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     httpd = make_server('', 8000, app)
-    print "Serving on port 8000..."
+    print("Serving on port 8000...")
     app.run(debug=True)
