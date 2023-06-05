@@ -57,6 +57,6 @@ def page_not_found(e):
     return "404 - Page not found, Please use the routes only that are available - Nihar", 404
 
 if __name__ == '__main__':
-    httpd = make_server('', 8000, app)
-    print("Serving on port 8000...")
+   # app.run(host='0.0.0.0', port=80)
+    print("Serving on port 80...")
     app.run(debug=True)
