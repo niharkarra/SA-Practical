@@ -57,7 +57,6 @@ def page_not_found(e):
     return "404 - Page not found, Please use the routes only that are available - Nihar", 404
 
 if __name__ == '__main__':
-   # If you get port in use issues, Uncomment below lines if you want to run app locally using docker.
+   # The below 1 line is for running this app locally in docker. This line doesn't matter while running in beanstalk as beanstalk serves python app on 5000 port.
    app.run(host='0.0.0.0', port=80)
-   print("Serving on port 80...")
    app.run(debug=True)
