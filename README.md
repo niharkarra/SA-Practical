@@ -37,9 +37,7 @@ Clients resolve the website’s domain name using the Domain Name System (DNS) s
 
 ## VPC Flow Diagram:
 
-
-
-
+![enter image description here](https://github.com/niharkarra/SA-Practical/blob/feature/v1.0/static/vpc_flow_diagram.png)
 
 
  
@@ -93,6 +91,7 @@ https://us-east-1.console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#
 2. Now run the container using the build image by running 
 `docker run -p 80:80 swa-app`
 3. Visit the site at http://127.0.0.1/
+
 
 
 ## References:
