@@ -1,6 +1,7 @@
+
 # SWA-Practical
 
-Small API written in Python using Flask that has routes to `skills`, `certifications`, `education` from a static resume.
+Small API written in Python using Flask that has routes to `skills`, `certifications`, `education` from a static resume.  
 
 App is publicly available at https://karnihar.awsps.myinstance.com/
 
@@ -12,9 +13,11 @@ App is publicly available at https://karnihar.awsps.myinstance.com/
 
 - App uses recommendations which are aligned with [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/). The Well-Architected Framework provides best practices to help build secure, high-performing, resilient, and efficient infrastructure for applications and workloads. Focusing on the [Security pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html) of the framework, we will walk through additional configurations for increased network protection and protection of data at rest and in transit.
 
+  
 
 The application uses below security best practices based on the Security pillar of the Well-Architected Framework.
 
+  
 
 - Protect Networks
 
@@ -22,6 +25,8 @@ The application uses below security best practices based on the Security pillar 
 
 - Protect data in transit
 
+  
+  
 
 To achieve the above three things, we implemented the below as part of this practical:
 
@@ -37,18 +42,24 @@ To achieve the above three things, we implemented the below as part of this prac
 
 9. Set up encryption in-transit by using the HTTPS protocol and HTTPS redirection while using latest TLS policy.
 
+  
+  
 
 ## App Architecture:
 
+  
 
 ![Figure 1: Target architecture for the two-tier web application deployed using Elastic Beanstalk](https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2021/12/06/image1-1.png)
 
+  
 
 Figure 1: Architecture for the two-tier web application deployed using Elastic Beanstalk.
 
+  
 
-*Note: Database shown here is just a illustration of thought and I was not able to spin it up due to cost factors but you get the idea.*
+*Note: Database shown here is just a illustration of thought and I was not able to spin it up due to cost factors but the idea is simple.*
 
+  
 
 Clients resolve the website’s domain name using the Domain Name System (DNS) service [Amazon Route 53](https://aws.amazon.com/route53/). An [Application Load Balancer](https://aws.amazon.com/elasticloadbalancing/application-load-balancer/) (ALB) is used to direct traffic to and from the [Amazon EC2](https://aws.amazon.com/ec2/) instances which are running the web servers. The EC2 instances are deployed in an [Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) in private subnets. To ensure that clients can always access the application, the infrastructure is setup so that it can automatically deal with system failures and scale up when there’s an increase in demand. This is done by placing the EC2 instances in the Auto Scaling group across two Availability Zones for high availability. There is also an RDS MySQL database deployed in a private subnet, which is replicated to a stand-by instance in another Availability Zone for disaster recovery. Logs and Metrics are sent to CloudWatch, and [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) is used to store logs and source code. Finally, a [Network Address Translation (NAT) gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) and [Internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) manage inbound and outbound traffic to subnets.
 
@@ -91,6 +102,7 @@ https://us-east-1.console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#
 
 **CloudFormation Stack for Custom VPC and additional Networking resources** - https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/stackinfo?stackId=arn%3Aaws%3Acloudformation%3Aus-east-1%3A217542142459%3Astack%2Fswa-vpc%2F2c96ca10-03ce-11ee-aac5-0a03e687a1a1
 
+**VPC:** vpc-0fd11b61475164f68 / swa-vpc
   
 
 **Load Balancer** - `ALB` - https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LoadBalancers:search=arn:aws:elasticloadbalancing:us-east-1:217542142459:loadbalancer/app/awseb-AWSEB-QQ19U5EL4CEJ/340ceb3a4b0b9316
@@ -155,11 +167,11 @@ https://us-east-1.console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#
 
 1. From the root of the app, build docker image by running
 
-`docker build -t swa-app .`
+	`docker build -t swa-app .`
 
 2. Now run the container using the build image by running
 
-`docker run -p 80:80 swa-app`
+	`docker run -p 80:80 swa-app`
 
 3. Visit the site at http://127.0.0.1/
 
