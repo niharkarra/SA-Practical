@@ -33,4 +33,4 @@ def page_not_found(e):
 if __name__ == '__main__':
    # The below 1 line is for running this app locally in docker. This line doesn't matter while running in beanstalk as beanstalk serves python app on 5000 port.
    app.run(host='0.0.0.0', port=80)
-   app.run(debug=True)
+   app.run
